@@ -22,11 +22,6 @@ pipeline {
 				echo "$env.BUILD_URL"
 			}
 		}
-		stage('Compile') {
-			steps {
-				sh "mvn clean compile"
-			}
-		}
 		stage('Test') {
 			steps {
 				sh "mvn test"
